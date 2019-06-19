@@ -9,7 +9,35 @@ The main Brat manual is here:
 https://brat.nlplab.org/manual.html
 
 
-# Giving user permissions
+### Giving user permissions
+User permission is supported, but not documented by Brat. The user-permissions are controlled by a configuration (.conf)  document called acl.conf, as with the visual, shortcut and annotation configuration files. 
+In server/src/projectconfig.py the default acl.conf is described. It looks like this:
+User-agent: *                                                                   
+Allow: /                                                                        
+Disallow: /hidden/                                                              
+                                                                                
+User-agent: guest                                                               
+Disallow: /confidential/
 
+The first line means that the lines after apply to all users. User-agent are the usernames as they are defined in the dictionary USER_PASSWORD in the config.py-file. The slash (\/) refers to the current directory. 
+The word "guest" seems to be a specific word referring to all those who access the site but are not logged in as users.
+The default document therefore says: all users are allowed to access the current directory, but they are not allowed to access the /hidden/ directory. All guest users are not allowed to access the /confidential/ directory.
+
+So if I have the users user1,user2 and user3, and I want to have three folders, one for each user, I can restrict access by having an acl.conf-file in each folder. An example for user1's folder would look like this:
+
+User-agent: *
+Disallow: /
+
+User-agent: user1
+Allow: /
+
+This means that in general I restrict access to everyone for the current directory, but after that I specify that user1 should have access.
+
+
+
+
+Sources:
+https://github.com/nlplab/brat/blob/master/configurations/acl.conf
+https://github.com/nlplab/brat/issues/1002
 
 # Special options for config files
