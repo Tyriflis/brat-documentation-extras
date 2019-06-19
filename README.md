@@ -25,11 +25,11 @@ The default document therefore says: all users are allowed to access the current
 
 So if I have the users user1,user2 and user3, and I want to have three folders, one for each user, I can restrict access by having an acl.conf-file in each folder. An example for user1's folder would look like this:
 
-User-agent: *
-Disallow: /
-
-User-agent: user1
-Allow: /
+> User-agent: *  
+> Disallow: /  
+>  
+> User-agent: user1  
+> Allow: /  
 
 This means that in general I restrict access to everyone for the current directory, but after that I specify that user1 should have access.
 
