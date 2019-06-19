@@ -12,12 +12,12 @@ https://brat.nlplab.org/manual.html
 ### Giving user permissions
 User permission is supported, but not documented by Brat. The user-permissions are controlled by a configuration (.conf)  document called acl.conf, as with the visual, shortcut and annotation configuration files. 
 In server/src/projectconfig.py the default acl.conf is described. It looks like this:
-User-agent: *                                                                   
-Allow: /                                                                        
-Disallow: /hidden/                                                              
-                                                                                
-User-agent: guest                                                               
-Disallow: /confidential/
+> User-agent: *                                                                   
+> Allow: /                                                                        
+> Disallow: /hidden/                                                              
+>                                                                                 
+> User-agent: guest                                                               
+> Disallow: /confidential/
 
 The first line means that the lines after apply to all users. User-agent are the usernames as they are defined in the dictionary USER_PASSWORD in the config.py-file. The slash (\/) refers to the current directory. 
 The word "guest" seems to be a specific word referring to all those who access the site but are not logged in as users.
