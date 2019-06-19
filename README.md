@@ -37,7 +37,7 @@ This means that in general I restrict access to everyone for the current directo
 
 
 Sources:
-https://github.com/nlplab/brat/blob/master/configurations/acl.conf
-https://github.com/nlplab/brat/issues/1002
+https://github.com/nlplab/brat/blob/master/configurations/acl.conf  
+https://github.com/nlplab/brat/issues/1002  
 
 # Special options for config files
