@@ -41,3 +41,8 @@ https://github.com/nlplab/brat/blob/master/configurations/acl.conf
 https://github.com/nlplab/brat/issues/1002  
 
 # Special options for config files
+
+
+To specify events with optional arguments:
+
+https://github.com/nlplab/brat/issues/434
