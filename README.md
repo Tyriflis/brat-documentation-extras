@@ -45,4 +45,17 @@ https://github.com/nlplab/brat/issues/1002
 
 To specify events with optional arguments:
 
+Role:Type    (exactly one)
+Role?:Type   (zero or one)
+Role+:Type   (one or more)
+Role*:Type   (zero or more)
+
+We should support also specifying a fixed number of arguments. As a use case, ACE MERGE-ORG events take exactly two Org arguments. As an obvious extension, it would be good to support argument number ranges.
+
+Given the use of regex-like syntax for the argument specs, one obvious alternative for config syntax would be like
+
+Role{2}:Type    (exactly two)
+Role{2,4}:Type  (between two and four)
+
+
 https://github.com/nlplab/brat/issues/434
